@@ -32,14 +32,18 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 import unittest
 
 def solution(nums:list[int], target:int)->list[int]:
-    # ADD your solution here 
-    pass
+    for x in range(len(nums)):
+        for y in range(x+1, len(nums)):
+            if nums[x] + nums[y] == target:
+                print(f"Indexes: [{x},{y}]")
+                return [x,y]
+    raise Exception("Was not possible to find indexes")
 
 
 class TestTwoSum(unittest.TestCase):
 
     def test_case_1(self):
-        nums = [1,7,11,15]
+        nums = [2,7,11,15]
         target = 9
         result = solution(nums=nums,target=target)
         solution_target = [0,1]
