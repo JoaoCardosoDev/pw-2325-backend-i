@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "cli"
+version = "0.1.0"
+description = "CLI project"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    {include = "src/shoppinglist.py"}
+]
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.scripts]
+slist = "src.shoppinglist:slist"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
