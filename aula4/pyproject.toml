@@ -10,9 +10,13 @@ packages = [
 ]
 [tool.poetry.dependencies]
 python = "^3.10"
+click = "^8.1.7"
 
 [tool.poetry.scripts]
 slist = "src.shoppinglist:slist"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
 
 [build-system]
 requires = ["poetry-core"]
