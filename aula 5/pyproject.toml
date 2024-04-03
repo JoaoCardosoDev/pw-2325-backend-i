@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "discordbot"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    {include = "bot.py"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+discord = "^2.3.2"
+
+[tool.poetry.scripts]
+botrun = "bot:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
