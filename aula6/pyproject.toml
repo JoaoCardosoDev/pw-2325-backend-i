@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "eticbot"
+version = "0.1.0"
+description = "Etic Discord Bot"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    {include = "eticbot/*.py"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+py-cord = "^2.5.0"
+
+[tool.poetry.scripts]
+bot = "eticbot.bot:bot"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
