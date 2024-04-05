@@ -1,13 +1,15 @@
 import click
+from llmbot.bot import *
 
 @click.group()
-def bot():
+def llm():
     pass
 
 
-@bot.command()
+@llm.command()
+#@click.option('--token', show_envvar="BOT_TOKEN")
 def run():
-    gpt_bot.start()
+    start('')
 
 if __name__=="__main__":
     run()

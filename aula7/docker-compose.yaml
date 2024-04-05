@@ -4,8 +4,16 @@ services:
 
   ollama:
     image: ollama/ollama:0.1.30
-    #command: ollama run gemma:2b
+    #command: ollama pull gemma:2b
+
     ports:
       - 11434:11434
 
-  #bot:
+  bot:
+    build:
+      context: .
+      dockerfile: dockerfile
+    command: ["llm", "run"]
+    # env_file:
+    #   -.env
+

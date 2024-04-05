@@ -5,6 +5,9 @@ description = "LLM bot python"
 authors = ["Your Name <you@example.com>"]
 license = "MIT"
 readme = "README.md"
+packages = [
+    {include = "llmbot/*.py"}
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -18,6 +21,9 @@ pydantic = "^2.6.4"
 pytest = "^8.1.1"
 ruff = "^0.3.5"
 black = "^24.3.0"
+
+[tool.poetry.scripts]
+llm = "llmbot.run:llm"
 
 [build-system]
 requires = ["poetry-core"]
