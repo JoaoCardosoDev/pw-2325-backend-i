@@ -1,19 +1,16 @@
 version: "latest"
-
 services:
 
   ollama:
     image: ollama/ollama:0.1.30
-    #command: ollama pull gemma:2b
-
     ports:
       - 11434:11434
 
   bot:
     build:
       context: .
-      dockerfile: dockerfile
-    command: ["llm", "run"]
-    # env_file:
-    #   -.env
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+  
 
