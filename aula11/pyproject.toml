@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "catalog"
+version = "0.1.0"
+description = "API for a catalog"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+package = [
+    { include = catalog/*.py}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.110.1"
+uvicorn = "^0.29.0"
+faker = "^24.8.0"
+
+[tool.poetry.scripts]
+api = "catalog.run:catalog"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
