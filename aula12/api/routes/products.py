@@ -11,7 +11,6 @@ router= APIRouter(prefix="/product", tags=["Products"])
 
 @router.get("")
 def get_all_products()-> List[Product]:
-
     result = [
         Product(**product)
         for product in get_products(db="/app/db.json")

@@ -15,4 +15,3 @@ routers = [
 
 for router in routers:
     api.include_router(router=router)
-

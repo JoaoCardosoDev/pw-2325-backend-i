@@ -6,7 +6,7 @@ from eticgpt.models import OllamaPrompt, OllamaResponse
 class OllamaAPI:
 
     def __init__(self) -> None:
-        self.base_url="http://localhost:11434"
+        self.base_url="http://ollama:11434"
         self.prompt_endpoint="api/generate"
 
 
@@ -25,8 +25,3 @@ class OllamaAPI:
             done=response.json().get('done', False),
             response=response.json().get('response', None)
         )
-
-
-
-
-

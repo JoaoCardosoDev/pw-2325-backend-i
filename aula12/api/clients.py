@@ -1,11 +1,10 @@
 
-
 import json
 from typing import List
 
 
-def get_products(db_path:str)->List[dict]:
-    result=[]
-    with open(db_path,"r") as data:
-        result=json.loads(data.readlines())
+def get_products(db:str)->List[dict]:
+    result = []
+    with open(db,"r") as data:
+        result=json.loads("".join(data.readlines()))
     return result
