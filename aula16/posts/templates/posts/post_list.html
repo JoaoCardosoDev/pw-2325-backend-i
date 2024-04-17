@@ -1,0 +1,10 @@
+<!-- Iterate over object_list -->
+{% for object in object_list %} 
+<!-- Display Objects -->
+<header><a href="{% url 'post_detail' object.title %}">{{ object.title }}</a></header> 
+<p>{{ object.content }}</p>
+
+<span>By {{object.user}}</span>
+<hr/>  
+{% endfor %}
+<a href="{% url 'product_list' %}">Products</a>
