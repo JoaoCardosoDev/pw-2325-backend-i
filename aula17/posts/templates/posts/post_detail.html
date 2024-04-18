@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block 'content' %} 
+<!-- Iterate over object_list -->
+<!-- Display Objects -->
+<header>{{ object.id }}<br>
+    {{ object.title }}</header>
+    <hr> 
+    
+    <p>{{ object.content }}</p> 
+    <span>By {{object.user}}</span>
+    <br>
+    <a href="{% url 'posts' %}">Back</a>
+    <a href="{% url 'home' %}">Home</a>
+{% endblock %}

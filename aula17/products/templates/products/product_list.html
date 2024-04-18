@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block 'content' %} 
+<ul> 
+    <!-- Iterate over object_list -->
+    {% for object in object_list %} 
+    <!-- Display Objects -->
+    <li><a href="{% url 'product_detail' object.name %}">{{ object.name }}</a></li> 
+    <li>{{ object.price }}</li> 
+    
+    <hr/> 
+    <!-- If object_list is empty  -->
+    {% empty %} 
+    <li>No products yet.</li> 
+    {% endfor %}
+    <a href="{% url 'posts' %}">Posts</a>
+    <a href="{% url 'home' %}">Home</a>
+</ul>
+{% endblock %}

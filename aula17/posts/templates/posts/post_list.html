@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block 'content' %} 
+<!-- Iterate over object_list -->
+<div class="postlist">
+{% for object in object_list %} 
+<!-- Display Objects -->
+<header><a href="{% url 'post_detail' object.title %}">{{ object.title }}</a></header> 
+<p>{{ object.content }}</p>
+
+<span>By {{object.user}}</span>
+<hr/>  
+{% endfor %}
+<a href="{% url 'products' %}">Products</a>
+<a href="{% url 'home' %}">Home</a>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block 'content' %} 
+<ul> 
+    <!-- Iterate over object_list -->
+    <!-- Display Objects -->
+    <li>{{ object.name }}</li> 
+    <li>{{ object.price }}</li> 
+    
+    <li>{{ object.id }}</li> 
+    <li>{{ object.enabled }}</li> 
+    
+    <a href="{% url 'products' %}">Back</a>
+    <a href="{% url 'home' %}">Home</a>
+</ul>
+{% endblock %}
